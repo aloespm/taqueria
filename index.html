@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ricos Tacos - Lo de María</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- === PANTALLA DE OFERTAS === -->
+  <div id="ofertas-screen" class="ofertas-screen">
+    <div class="ofertas-header">
+      <div class="oferta-circle">
+        <span>🔥 OFERTAS 🔥</span>
+      </div>
+    </div>
+
+    <div class="ofertas-paquetes">
+      <!-- Paquete 1 -->
+      <div class="oferta-paquete">
+        <h2>PAQUETE 1</h2>
+        <p><span class="precio-anterior">$250</span> <span class="precio-nuevo">$150</span></p>
+        <ul>
+          <li>🌮 5 tacos dorados de barbacoa</li>
+          <li>🥣 2 consomés</li>
+          <li>🥤 2 refrescos</li>
+        </ul>
+      </div>
+
+      <!-- Paquete 2 -->
+      <div class="oferta-paquete">
+        <h2>PAQUETE 2</h2>
+        <p><span class="precio-anterior">$300</span> <span class="precio-nuevo">$200</span></p>
+        <ul>
+          <li>🌮 5 tacos de arrachera</li>
+          <li>🥤 2 refrescos</li>
+          <li>🍟 1 orden de papas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- === PANTALLA DE TACOS === -->
+  <div id="main-container" class="container hidden">
+    <div class="logo"><span>🌮</span> Lo de María</div>
+    <h1>RICOS TACOS</h1>
+
+    <div class="lotes-container">
+
+      <!-- === LOTE 1 === -->
+      <div class="lote" id="lote1">
+        <h2>Tacos 1</h2>
+        <div class="taco-card">
+          <img src="imagenes/asada.jpg" alt="">
+          <span>TACOS DE ASADA</span>
+          <div class="precio">$25</div>
+        </div>
+
+        <div class="taco-card">
+          <img src="imagenes/chorizo.jpg" alt="">
+          <span>TACOS DE CHORIZO</span>
+          <div class="precio">$25</div>
+        </div>
+
+        <div class="taco-card">
+          <img src="imagenes/pastor.jpg" alt="">
+          <span>TACOS AL PASTOR</span>
+          <div class="precio">$25</div>
+        </div>
+
+        <div class="taco-card">
+          <img src="imagenes/suadero.jpg" alt="">
+          <span>TACOS DE SUADERO</span>
+          <div class="precio">$25</div>
+        </div>
+
+        <div class="taco-card">
+          <img src="imagenes/barbacoa.jpg" alt="">
+          <span>TACOS DE BARBACOA</span>
+          <div class="precio">$25</div>
+        </div>
+      </div>
+
+      <!-- === LOTE 2 === -->
+      <div class="lote" id="lote2">
+        <h2>Tacos 2</h2>
+        <div class="taco-card">
+          <img src="imagenes/tripa.jpg" alt="">
+          <span>TACOS DE TRIPA</span>
+          <div class="precio">$25</div>
+        </div>
+
+        <div class="taco-card">
+          <img src="imagenes/lengua.jpg" alt="">
+          <span>TACOS DE LENGUA</span>
+          <div class="precio">$25</div>
+        </div>
+
+        <div class="taco-card">
+          <img src="imagenes/cabeza.jpg" alt="">
+          <span>TACOS DE CABEZA</span>
+          <div class="precio">$25</div>
+        </div>
+
+        <div class="taco-card">
+          <img src="imagenes/carnitas.jpg" alt="">
+          <span>TACOS DE CARNITAS</span>
+          <div class="precio">$25</div>
+        </div>
+
+        <div class="taco-card">
+          <img src="imagenes/pollo.jpg" alt="">
+          <span>TACOS DE POLLO</span>
+          <div class="precio">$25</div>
+        </div>
+      </div>
+
+      <!-- === LOTE 3 === -->
+      <div class="lote" id="lote3">
+        <h2>Tacos 3</h2>
+        <div class="taco-card">
+          <img src="imagenes/chuleta.jpg" alt="">
+          <span>TACOS DE CHULETA</span>
+          <div class="precio">$25</div>
+        </div>
+
+        <div class="taco-card">
+          <img src="imagenes/pescado.jpg" alt="">
+          <span>TACOS DE PESCADO</span>
+          <div class="precio">$25</div>
+        </div>
+
+        <div class="taco-card">
+          <img src="imagenes/camaron.jpg" alt="">
+          <span>TACOS DE CAMARÓN</span>
+          <div class="precio">$25</div>
+        </div>
+
+        <div class="taco-card">
+          <img src="imagenes/arrachera.jpg" alt="">
+          <span>TACOS DE ARRACHERA</span>
+          <div class="precio">$25</div>
+        </div>
+
+        <div class="taco-card">
+          <img src="imagenes/longaniza.jpg" alt="">
+          <span>TACOS DE LONGANIZA</span>
+          <div class="precio">$25</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      📞 ORDENA AHORA
+      <span>(55) 4458-5225</span>
+    </div>
+  </div>
+
+  <!-- === CÍRCULO CON EL TEMPORIZADOR === -->
+  <div class="progress-circle">
+    <span class="timer"></span>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

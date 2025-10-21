@@ -1,0 +1,425 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Black', sans-serif;
+  background-color: #e62b0f;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* === CONTENEDOR GENERAL === */
+.container {
+  width: 100%;
+  padding: 10px;
+}
+
+/* === LOGO Y TÍTULO === */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+.logo span {
+  background-color: #ffcc00;
+  color: #b91c1c;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ffde59;
+  margin: 10px 0 25px;
+  text-shadow: 3px 3px 5px #7a1a00;
+}
+
+/* === CONTENEDOR DE LOTES === */
+.lotes-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* === CADA LOTE === */
+.lote {
+  flex: 1;
+  min-width: 300px;
+  background-color: #b91c1c;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+  animation: fadeIn 1s ease;
+}
+
+.lote h2 {
+  color: #ffcc00;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px #7a1a00;
+}
+
+/* === TARJETAS === */
+.taco-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f38b1c;
+  border: 4px solid #ffcc00;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 10px 0;
+  transform: scale(0.9);
+  animation: bounceIn 0.8s ease forwards;
+}
+
+.taco-card img {
+  width: 45%;
+  height: 90px;
+  object-fit: cover;
+}
+
+/* .taco-card span {
+  width: 55%;
+  font-size: 1rem;
+  color: #7a1a00;
+  font-weight: 900;
+} */
+
+.taco-card span {
+  width: 55%;
+  font-size: 1rem;
+  color: #7a1a00;
+  font-weight: 900;
+  padding-left: 10px; /* añade un pequeño margen interno */
+  margin-right: 25px; /* separa el texto del precio */
+}
+
+/* === ANIMACIONES === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.6); }
+  60% { opacity: 1; transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: #f38b1c;
+  color: #7a1a00;
+  font-weight: 900;
+  padding: 15px;
+  margin-top: 20px;
+  border-top: 4px solid #ffcc00;
+  border-radius: 20px 20px 0 0;
+}
+
+.footer span {
+  display: block;
+  color: #ffeb99;
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+
+
+/* === PRECIO CON ESTILO DE ETIQUETA === */
+.precio {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-5deg);
+  background: radial-gradient(circle at 30% 30%, #ffcc00, #ffb300);
+  color: #b91c1c;
+  font-weight: 900;
+  font-size: 24px;
+  padding: 8px 18px;
+  border-radius: 20px 40px 20px 40px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  border: 3px solid #b91c1c;
+  text-shadow: 1px 1px 1px #fff5cc;
+  z-index: 10;
+}
+
+/* Aseguramos que .taco-card tenga posición relativa para ubicar el precio */
+.taco-card {
+  position: relative;
+}
+
+.precio {
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: translateY(-50%) rotate(-5deg) scale(1); }
+  100% { transform: translateY(-50%) rotate(-5deg) scale(1.1); }
+}
+
+@media (max-width: 500px) {
+  .precio {
+    right: -10px;
+    font-size: 0.9rem;
+    padding: 6px 14px;
+  }
+
+  .taco-card span {
+    margin-right: 20px;
+  }
+}
+
+
+/* === PANTALLA DE OFERTAS === */
+.ofertas-screen {
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #e62b0f, #ff9900);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  z-index: 9999;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.ofertas-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+.ofertas-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 40px 0;
+}
+
+
+/* Círculo central */
+.oferta-circle {
+  width: 450px;
+  height: 200px;
+  background: radial-gradient(circle at center, #ffcc00 0%, #ff9900 80%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.oferta-circle span {
+  color: #b91c1c;
+  font-size: 2rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 6px #fff;
+}
+
+
+
+.oferta-circle span {
+  color: #b91c1c;
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 6px #fff;
+}
+
+/* Animaciones */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(255,255,255,0.6); }
+  50% { transform: scale(1.1); box-shadow: 0 0 60px rgba(255,255,255,0.9); }
+}
+
+/* Para ocultar el contenido principal mientras está la pantalla de ofertas */
+.hidden {
+  display: none;
+}
+
+/* Paquetes */
+.ofertas-paquetes {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; 
+  gap: 40px;
+  width: 100%;
+  flex-grow: 1;
+  margin-top: 200px;
+}
+
+.oferta-paquete {
+  background: rgba(255, 255, 255, 0.1);
+  background-color: #f38b1c;
+  /* color: #7a1a00; */
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 3px solid #ffcc00;
+  border-radius: 20px;
+  padding: 15px;
+  width: 280px;
+  backdrop-filter: blur(3px);
+  animation: slideIn 1s ease forwards;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: -106px; 
+  animation: slideUp 0.8s ease forwards;
+}
+
+
+
+
+.oferta-paquete h2 {
+  color: #fff;
+  font-size: 3.0rem;
+  margin-bottom: 5px;
+}
+
+.oferta-paquete p {
+  margin: 5px 0;
+  font-size: 2.0rem;
+}
+
+
+.precio-anterior {
+  text-decoration: line-through;
+  color: #ffeaea;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.precio-nuevo {
+  color: #ffeb3b;
+  font-weight: 800;
+  font-size: 2.0rem;
+}
+
+.oferta-paquete ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.oferta-paquete li {
+  font-size: 2rem;
+  margin: 3px 0;
+}
+
+/* Animaciones */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ocultar pantalla principal mientras ofertas */
+.hidden {
+  display: none;
+}
+
+/* === Indicador de progreso (círculo) === */
+.progress-circle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 63px;
+  height: 49px;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 0 0 6px orange;
+  /* Puedes quitar rotate si lo usabas aquí */
+}
+
+/* El número encima, sin rotación */
+.timer {
+  font-size: 2rem;
+  font-weight: bold;
+  color: orange;
+  position: relative;
+  z-index: 1;
+  transform: none;
+}
+
+/* Si tienes una animación tipo loading, hazlo con ::before o ::after */
+.progress-circle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid orange;
+  border-top-color: transparent;
+  animation: spin 10s linear forwards;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+
+.progress-circle .timer {
+  color: #ffeb3b;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px #000;
+  z-index: 10000;
+}
+
+/* @keyframes rotateCircle {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */
+
+
+/* @keyframes rotateCircle {
+  from { transform: translateX(-50%) rotate(0deg); }
+  to { transform: translateX(-50%) rotate(360deg); }
+} */
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Animación de rotación para el borde, no para el número */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
